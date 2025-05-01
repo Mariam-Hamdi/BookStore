@@ -1,0 +1,26 @@
+﻿@model List<BookStore.Models.Favorite>
+
+@{
+    ViewData["Title"] = "My Favorites";
+}
+
+<h2>My Favorite Books</h2>
+
+<div class="row">
+    @foreach (var favorite in Model)
+    {
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img src="@favorite.Book.ImageUrl" class="card-img-top" alt="@favorite.Book.Title" />
+                <div class="card-body">
+                    <h5 class="card-title">@favorite.Book.Title</h5>
+                    <p class="card-text">@favorite.Book.Description</p>
+                    <form asp-controller="Favorites" asp-action="RemoveFromFavorites" method="post">
+                        <input type="hidden" name="favoriteId" value="@favorite.Id" />
+                        <button type="submit" class="btn btn-danger">Remove</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
+</div>

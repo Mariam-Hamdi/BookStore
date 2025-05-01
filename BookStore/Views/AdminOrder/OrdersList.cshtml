@@ -1,0 +1,47 @@
+﻿@model IEnumerable<BookStore.Models.Order>
+
+<h2>Orders List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Order ID</th>
+            <th>Order Date</th>
+            <th>Ordered Books</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.Id</td>
+                <td>@order.OrderPlaced.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                <td>
+                    @foreach (var item in order.OrderItems)
+                    {
+                        <div>@item.Book.Title</div>
+                    }
+                </td>
+                <td>
+                    @foreach (var item in order.OrderItems)
+                    {
+                        <div>@item.Quantity</div>
+                    }
+                </td>
+                <td>
+                    @foreach (var item in order.OrderItems)
+                    {
+                        <div>@((item.Price * item.Quantity).ToString("c"))</div>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (Model == null || !Model.Any())
+{
+    <p>No orders found.</p>
+}
