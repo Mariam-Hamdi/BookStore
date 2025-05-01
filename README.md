@@ -1,88 +1,66 @@
-# BookStore
+BookStore
+Description:
+A BookStore application built with MVC .NET, offering user and admin features including registration, login, book browsing, shopping cart, order management, and more. Admins can manage books, categories, authors, and orders through an intuitive dashboard.
 
-Description
-This project is a BookStore application built with MVC .NET. It provides various features for both users and administrators, including user registration, login, book browsing, shopping cart, order management, and more. The system also allows the admin to manage books, categories, authors, and orders through an intuitive dashboard.
+Features:
 
-Features
 User Features:
-User Registration & Login: Secure user registration and login functionality.
 
-Book Browsing: Browse available books by categories, authors, or directly from the home page.
+User Registration & Login
 
-Search: Users can search for books by title, author, or category.
+Book Browsing by category, author, or title
 
-Book Details Page: View detailed information about each book.
+Search for books
 
-Shopping Cart: Add books to the shopping cart, view cart items, and modify quantities.
+View detailed book information
 
-Checkout: Proceed with checkout, providing shipping information and payment options.
+Shopping Cart
 
-Order Management: Users can view their order history and order status.
+Checkout with shipping info & payment
 
-Wish List: Save books to the wish list for future purchases.
+Order Management
 
-Favorites: Add books to favorites for easy access later.
+Wish List & Favorites
 
-User Profile: Edit and view user profile information.
+User Profile management
 
 Admin Features:
-Admin Dashboard: A comprehensive dashboard to view overall statistics and manage the store.
 
-Book Management: Add, update, or delete books from the store catalog.
+Admin Dashboard for statistics
 
-Category Management: Create and manage book categories.
+Book Management (add, update, delete)
 
-Author Management: Manage authors associated with books.
+Category and Author Management
 
-Order Management: View and manage customer orders, update order statuses.
+Order Management
 
-Technologies Used
-ASP.NET MVC for the main structure.
+Technologies Used:
 
-Entity Framework for database management.
+ASP.NET MVC, Entity Framework, SQL Server, Bootstrap
 
-SQL Server for the database.
+Setup:
 
-Bootstrap for responsive design.
+Prerequisites:
 
-Setup
-Prerequisites
 .NET SDK (version 8 or higher)
 
 SQL Server
 
-Visual Studio (or Visual Studio Code)
+Visual Studio or Visual Studio Code
 
-A database setup for the BookStore (use the provided scripts for initial setup).
+Installation:
 
-Installation
-Clone this repository:
+Clone the repository.
 
-bash
-Copy
-Edit
-git clone <repository_url>
-Restore the NuGet packages:
+Run dotnet restore to restore NuGet packages.
 
-bash
-Copy
-Edit
-dotnet restore
-Update the connection string in appsettings.json to match your database configuration.
+Update the connection string in appsettings.json.
 
-Apply the migrations to set up the database schema:
+Run dotnet ef database update to apply migrations.
 
-bash
-Copy
-Edit
-dotnet ef database update
-Run the application:
+Run the application with dotnet run.
 
-bash
-Copy
-Edit
-dotnet run
-Access the application via http://localhost:5000.
+Access the app via http://localhost:5000.
 
-Contributing
-Feel free to fork the repository and submit pull requests. All contributions are welcome!
+Contributing:
+Feel free to fork and submit pull requests. All contributions are welcome!
